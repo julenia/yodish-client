@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { translateYodish } from '../actions/yodish'
+import { translateSith } from '../actions/sith'
 import TranslateInput from './TranslateInput'
 import TextToSpeechContainer from './TextToSpeechContainer';
 
-class TranslateInputContainer extends React.Component {
+class SithInputContainer extends React.Component {
   state = {
-    yodish: '',
+    sith: '',
   }
 
   onChange = (event) => {
@@ -18,9 +18,9 @@ class TranslateInputContainer extends React.Component {
   onSubmit = (event) => {
     event.preventDefault()
     console.log()
-    this.props.translateYodish(this.state)
+    this.props.translateSith(this.state)
     this.setState({
-      yodish:'',
+      sith:'',
     })
   }
 
@@ -30,16 +30,16 @@ class TranslateInputContainer extends React.Component {
       onSubmit={this.onSubmit}
       onChange={this.onChange}
       values={this.state}
-      yodish={this.props.yodish}
+      sith={this.props.sith}
     />
     <TextToSpeechContainer/></div>)
   }
 }
 const mapStateToProps = state => {
   return {
-    yodish: state.yodish,
+    sith: state.sith,
   }
 
 }
 
-export default connect(mapStateToProps, { translateYodish })(TranslateInputContainer)
+export default connect(mapStateToProps, { translateSith })(SithInputContainer)

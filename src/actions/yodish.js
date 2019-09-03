@@ -1,6 +1,5 @@
 import * as request from 'superagent'
-import { yodishURL, yodishURLbackup } from '../constants'
-import { endianness } from 'os';
+import { yodishURL, yodishURLbackup, proxyurl } from '../constants'
 export const YODISH_TRANSLATED = 'YODISH_TRANSLATED'
 
 const yodishTranslated = yodish => ({
@@ -10,8 +9,6 @@ const yodishTranslated = yodish => ({
 
 export const translateYodish = (data) => (dispatch, getState) => {
   const query = encodeURIComponent(data.text)
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  // const url = `https://api.funtranslations.com/translate/yoda.json?text=${query}`
   request
   .get(`${proxyurl + yodishURL}?text=${query}`)
   .then(response => {
@@ -23,9 +20,8 @@ export const translateYodish = (data) => (dispatch, getState) => {
       .then(res => {
         console.log(res)
         dispatch(yodishTranslated(res.body))})
-      .catch(error => console.error)
+      .catch(console.error)
     }
     return
-    
   })
   }

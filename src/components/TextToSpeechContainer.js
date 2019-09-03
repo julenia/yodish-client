@@ -4,14 +4,17 @@ import { textToSpeech } from '../actions/speech'
 import TextToSpeech from './TextToSpeech'
 
 class TextToSpeechContainer extends React.Component {
+  
 
   onClick = (event) => {
     event.preventDefault()
-    const speech = this.props.yodish.contents ? this.props.yodish.contents.translated : this.props.yodish.yodish
+    // const speech = this.props.yodish.contents ? this.props.yodish.contents.translated : this.props.yodish.yodish
+    const speech = this.props.language
     this.props.textToSpeech(speech)
   }
 
   render() {
+    console.log('language', this.props.language)
     return (
       <TextToSpeech
       onClick={this.onClick}

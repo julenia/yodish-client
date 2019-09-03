@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { translateSith } from '../actions/sith'
-import TranslateInput from './TranslateInput'
+import SithInput from './SithInput'
 import TextToSpeechContainer from './TextToSpeechContainer';
 
 class SithInputContainer extends React.Component {
@@ -17,22 +17,22 @@ class SithInputContainer extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault()
-    console.log()
+    console.log('do I get submitted?')
     this.props.translateSith(this.state)
     this.setState({
-      sith:'',
+      sith:'', 
     })
   }
 
   render() {
     return (
-      <div><TranslateInput
+      <div><SithInput
       onSubmit={this.onSubmit}
       onChange={this.onChange}
       values={this.state}
       sith={this.props.sith}
     />
-    <TextToSpeechContainer/></div>)
+    {this.props.sith && <TextToSpeechContainer language={this.props.sith.contents.translated}/>}</div>)
   }
 }
 const mapStateToProps = state => {

@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
-import TranslateInput from './components/TranslateInputContainer'
+import TranslateInputContainer from './components/TranslateInputContainer'
+import SithInputContainer from './components/SithInputContainer';
 
 
 class App extends React.Component {
@@ -9,9 +10,8 @@ class App extends React.Component {
     return (
       <div className="App">
 
-          <Route exact path='/' component={TranslateInput}/>
-          {/* <Route path='/event/:id' component={EventsDetailsContainer} />
-          <Route path='/ticket/:id' component={TicketDetailsContainer} /> */}
+          <Route exact path='/yodish' component={TranslateInputContainer}/>
+          <Route exact path='/sith' component={SithInputContainer} />
       </div>
     );
   }

@@ -1,16 +1,17 @@
 import * as React from 'react'
-export default function TranslateInput (props){
+export default function GunganInput (props){
+  console.log(props.values)
   return(
     <div><form onSubmit={props.onSubmit}>
       <div><label>
-        Enter the text you want to translate to yodish!:
+        Enter the text you want to translate to Gungan!:
         <input type="text" name="text" value={props.values.text} onChange={props.onChange}/>
       </label></div>
       <div><button type="submit">Translate</button></div>
     </form>
     <div>
-    {props.yodish && <div className='translatedText'>
-    {props.yodish.contents ? props.yodish.contents.translated : props.yodish.yodish}
+    {props.gungan && <div className='translatedText'>
+    {props.gungan.contents && props.gungan.contents.translated}
     </div>}
     </div>
     </div>)

@@ -12,7 +12,7 @@ const makeSound =(snd) => {
   sound.play()
 }
 
-export const textToSpeech = data => (dispatch, getState) => {
+export const textToSpeech = data => (dispatch) => {
   console.log(data)
   const key = '6a11b2ec828643a6b434a01b57c69c3c'
   const lang='en-us'

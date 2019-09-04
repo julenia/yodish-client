@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { translateSith } from '../actions/sith'
-import SithInput from './SithInput'
+import { translateGungan } from '../actions/gungan'
+import GunganInput from './GunganInput'
 import TextToSpeechContainer from './TextToSpeechContainer';
 
-class SithInputContainer extends React.Component {
+class GunganInputContainer extends React.Component {
   state = {
-    sith: '',
+    gungan: '',
     text: ''
   }
 
@@ -18,28 +18,29 @@ class SithInputContainer extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault()
-    this.props.translateSith(this.state)
+    this.props.translateGungan(this.state)
     this.setState({
       text:'', 
     })
   }
 
   render() {
+    console.log('state', this.state)
     return (
-      <div><SithInput
+      <div><GunganInput
       onSubmit={this.onSubmit}
       onChange={this.onChange}
       values={this.state}
-      sith={this.props.sith}
+      gungan={this.props.gungan}
     />
-    {this.props.sith && <TextToSpeechContainer language={this.props.sith.contents.translated}/>}</div>)
+    {this.props.gungan && <TextToSpeechContainer language={this.props.gungan.contents.translated}/>}</div>)
   }
 }
 const mapStateToProps = state => {
   return {
-    sith: state.sith,
+    gungan: state.gungan,
   }
 
 }
 
-export default connect(mapStateToProps, { translateSith })(SithInputContainer)
+export default connect(mapStateToProps, { translateGungan })(GunganInputContainer)

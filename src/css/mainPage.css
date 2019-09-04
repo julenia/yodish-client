@@ -1,0 +1,25 @@
+.mainPage {
+  font: 100% Helvetica, sans-serif;
+  color: #f5c542;
+  font: 100% Helvetica, sans-serif;
+  color: #f5c542;
+  text-align: center;
+  padding: 0;
+  background-image: url("https://www.elisascience.org/files/styles/keyimage/public/images/Star-field-hubble-deep.JPG?itok=2E5GnO3H");
+}
+
+.App {
+  font: 100% Helvetica, sans-serif;
+  font: 100% Helvetica, sans-serif;
+  color: #f5c542;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-image: url("https://www.elisascience.org/files/styles/keyimage/public/images/Star-field-hubble-deep.JPG?itok=2E5GnO3H");
+}
+
+img {
+  height: 50rem;
+}
+
+/*# sourceMappingURL=mainPage.css.map */

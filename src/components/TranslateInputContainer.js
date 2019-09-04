@@ -34,10 +34,11 @@ class TranslateInputContainer extends React.Component {
       values={this.state}
       yodish={this.props.yodish}
     />
-    {this.props.yodish && <TextToSpeechContainer language={
+    {/* {this.props.yodish && <TextToSpeechContainer language={
       this.props.yodish.contents 
       ? this.props.yodish.contents.translated 
-      : this.props.yodish.yodish}/>}</div>)
+      : this.props.yodish.yodish}/>} */}
+      </div>)
   }
 }
 const mapStateToProps = state => {

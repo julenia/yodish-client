@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { translateGungan } from '../actions/gungan'
 import GunganInput from './GunganInput'
-import TextToSpeechContainer from './TextToSpeechContainer';
 
 class GunganInputContainer extends React.Component {
   state = {
@@ -33,7 +32,8 @@ class GunganInputContainer extends React.Component {
       values={this.state}
       gungan={this.props.gungan}
     />
-    {this.props.gungan && <TextToSpeechContainer language={this.props.gungan.contents.translated}/>}</div>)
+    {/* {this.props.gungan && <TextToSpeechContainer language={this.props.gungan.contents.translated}/>} */}
+    </div>)
   }
 }
 const mapStateToProps = state => {

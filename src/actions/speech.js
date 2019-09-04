@@ -15,7 +15,7 @@ const makeSound =(snd) => {
 export const textToSpeech = data => (dispatch) => {
   console.log(data)
   const key = '6a11b2ec828643a6b434a01b57c69c3c'
-  const lang='en-us'
+  const lang='en-gb'
   request
   .post(`${proxyurl + speechURL}?key=${key}&hl=${lang}&src=${data}&c=mp3&b64=true&r=-2`)
   .then(res => {

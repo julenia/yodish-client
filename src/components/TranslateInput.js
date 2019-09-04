@@ -2,6 +2,7 @@ import * as React from 'react'
 import '../css/yodish.css'
 import TextToSpeechContainer from './TextToSpeechContainer'
 export default function TranslateInput (props){
+
   return(
     <div className='yodishPage'>
       <img src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda'/>

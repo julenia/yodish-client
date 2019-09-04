@@ -22,4 +22,14 @@ img {
   height: 50rem;
 }
 
+h1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 0rem;
+  padding-top: 2rem;
+}
+
+h2 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 /*# sourceMappingURL=mainPage.css.map */

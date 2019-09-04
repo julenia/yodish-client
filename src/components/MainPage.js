@@ -5,7 +5,7 @@ import '../css/mainPage.css'
 export default function MainPage (props){
   return(
     <div className='mainPage'>
-      <h1>Welcome to the StarWars languages translation app</h1>
+      <h1>Welcome to the Star Wars languages translation app</h1>
       <h2>Choose the language:</h2>
       <Link to='/yodish'><img src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda'/></Link>
       <Link to='/sith'><img src='https://img.pngio.com/darth-maul-png-by-gasa979-on-deviantart-darth-maul-png-535_1122.png' alt='sith'/></Link>

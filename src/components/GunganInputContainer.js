@@ -24,7 +24,6 @@ class GunganInputContainer extends React.Component {
   }
 
   render() {
-    console.log('state', this.state)
     return (
       <div><GunganInput
       onSubmit={this.onSubmit}
@@ -32,7 +31,6 @@ class GunganInputContainer extends React.Component {
       values={this.state}
       gungan={this.props.gungan}
     />
-    {/* {this.props.gungan && <TextToSpeechContainer language={this.props.gungan.contents.translated}/>} */}
     </div>)
   }
 }

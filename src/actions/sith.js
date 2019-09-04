@@ -15,14 +15,4 @@ export const translateSith = (data) => (dispatch, getState) => {
     console.log(response)
     dispatch(sithTranslated(response.body))})
   .catch(console.error)
-  // .catch(err => {
-  //   if(err.status===429) {
-  //     request.get(`${proxyurl + yodishURLbackup}?text=${query}`)
-  //     .then(res => {
-  //       console.log(res)
-  //       dispatch(yodishTranslated(res.body))})
-  //     .catch(console.error)
-  //   }
-  //   return
-  // })
   }

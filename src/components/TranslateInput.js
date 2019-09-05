@@ -11,7 +11,7 @@ export default function TranslateInput (props){
       <h1>YODISH</h1>
       <form onSubmit={props.onSubmit} className='form'>
         <div><label>
-        Enter the text you want to translate to yodish!:
+        Enter the text you want to translate to Yodish!:
         <input type="text" name="text" value={props.values.text} onChange={props.onChange}/>
       </label></div>
       <div><button type="submit">Translate</button></div>

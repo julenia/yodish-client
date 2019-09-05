@@ -12,7 +12,7 @@ export default function SithInput (props){
        <h1>SITH</h1>
       <form onSubmit={props.onSubmit}>
       <div><label>
-        Enter the text you want to translate to sith!:
+        Enter the text you want to translate to Sith!:
         <input type="text" name="text" value={props.values.text} onChange={props.onChange}/>
       </label></div>
       <div><button type="submit">Translate</button></div>

@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { translateYodish } from '../actions/yodish'
 import TranslateInput from './TranslateInput'
-import TextToSpeechContainer from './TextToSpeechContainer';
 
 class TranslateInputContainer extends React.Component {
   state = {
@@ -34,10 +33,6 @@ class TranslateInputContainer extends React.Component {
       values={this.state}
       yodish={this.props.yodish}
     />
-    {/* {this.props.yodish && <TextToSpeechContainer language={
-      this.props.yodish.contents 
-      ? this.props.yodish.contents.translated 
-      : this.props.yodish.yodish}/>} */}
       </div>)
   }
 }

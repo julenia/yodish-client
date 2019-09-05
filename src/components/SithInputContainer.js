@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { translateSith } from '../actions/sith'
 import SithInput from './SithInput'
-import TextToSpeechContainer from './TextToSpeechContainer';
 
 class SithInputContainer extends React.Component {
   state = {
@@ -24,6 +23,7 @@ class SithInputContainer extends React.Component {
     })
   }
 
+
   render() {
     return (
       <div><SithInput
@@ -32,7 +32,7 @@ class SithInputContainer extends React.Component {
       values={this.state}
       sith={this.props.sith}
     />
-    {this.props.sith && <TextToSpeechContainer language={this.props.sith.contents.translated}/>}</div>)
+    </div>)
   }
 }
 const mapStateToProps = state => {

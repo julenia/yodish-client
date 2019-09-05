@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+// import './css/mainPage.css'
 import { Route } from 'react-router-dom'
 import TranslateInputContainer from './components/TranslateInputContainer'
 import SithInputContainer from './components/SithInputContainer';

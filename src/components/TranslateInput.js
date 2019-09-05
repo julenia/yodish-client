@@ -1,11 +1,12 @@
 import * as React from 'react'
 import '../css/yodish.css'
 import TextToSpeechContainer from './TextToSpeechContainer'
+import { Link } from 'react-router-dom'
 export default function TranslateInput (props){
 
   return(
-    <div className='yodishPage'>
-      <img src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda'/>
+    <div>
+      <img src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda' className='yodaPic'/>
       <div className='formDisplay'>
       <h1>YODISH</h1>
       <form onSubmit={props.onSubmit} className='form'>
@@ -18,13 +19,14 @@ export default function TranslateInput (props){
     {props.yodish && <div className='translatedText'>
     {props.yodish.contents ? props.yodish.contents.translated : props.yodish.yodish}
     </div>}
-    </div>
     {props.yodish && <TextToSpeechContainer language={
       props.yodish.contents 
       ? props.yodish.contents.translated 
       : props.yodish.yodish}/>}
+    </div>
     </form> 
     </div>
+    <Link to='/'><button>Back</button></Link>
     </div>)
 
 }

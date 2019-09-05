@@ -1,6 +1,8 @@
 import * as React from 'react'
 import '../css/yodish.css'
 import TextToSpeechContainer from './TextToSpeechContainer'
+import {Link} from 'react-router-dom'
+
 export default function SithInput (props){
   console.log(props)
   return(
@@ -23,6 +25,7 @@ export default function SithInput (props){
     </div>
     </form>
     </div>
+    <Link to='/'><button>Back</button></Link>
     </div>)
 
 }

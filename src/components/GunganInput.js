@@ -1,5 +1,7 @@
 import * as React from 'react'
 import TextToSpeechContainer from './TextToSpeechContainer';
+import { Link } from 'react-router-dom'
+
 export default function GunganInput (props){
   console.log(props.values)
   return(
@@ -22,6 +24,7 @@ export default function GunganInput (props){
     </div>
     </form>
     </div>
+    <Link to='/'><button>Back</button></Link>
     </div>)
 
 }

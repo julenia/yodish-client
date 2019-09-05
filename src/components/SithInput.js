@@ -6,6 +6,8 @@ export default function SithInput (props){
   return(
     <div>
       <img src='https://img.pngio.com/darth-maul-png-by-gasa979-on-deviantart-darth-maul-png-535_1122.png' alt='sith'/>
+      <div className='formDisplay'>
+       <h1>SITH</h1>
       <form onSubmit={props.onSubmit}>
       <div><label>
         Enter the text you want to translate to sith!:
@@ -20,6 +22,7 @@ export default function SithInput (props){
     {props.sith && <TextToSpeechContainer language={props.sith.contents.translated}/>}
     </div>
     </form>
+    </div>
     </div>)
 
 }

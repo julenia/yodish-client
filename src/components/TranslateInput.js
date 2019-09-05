@@ -6,6 +6,8 @@ export default function TranslateInput (props){
   return(
     <div className='yodishPage'>
       <img src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda'/>
+      <div className='formDisplay'>
+      <h1>YODISH</h1>
       <form onSubmit={props.onSubmit} className='form'>
         <div><label>
         Enter the text you want to translate to yodish!:
@@ -22,6 +24,7 @@ export default function TranslateInput (props){
       ? props.yodish.contents.translated 
       : props.yodish.yodish}/>}
     </form> 
+    </div>
     </div>)
 
 }
